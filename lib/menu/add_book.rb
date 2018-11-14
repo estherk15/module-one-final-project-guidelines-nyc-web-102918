@@ -1,3 +1,6 @@
+require_relative '../api_communicator.rb'
+
+
 def ask_for_book #Asking user input of Title and Author
   puts "Enter  the title"
   title=gets.chomp
@@ -17,7 +20,19 @@ def add_book(title,author) #calls on get_book_data_from_title to see if the Goog
     if answer == "Y"
       savebook_from_user(title, author)
     else answer =="N"
+    end
   end
 
 
+end
+
+
+def savebook(data)
+
+  author1=Author.new(author)
+  genre= Genre.new(genre)
+  book1=Book.new(title:title,author: author, genre:genre)
+end
+
+def savebook_from_user(title,author)
 end

@@ -1,10 +1,10 @@
 require 'rest-client'
 require 'json'
 require 'pry'
-require "../lib/menu/add_book.rb"
-require "../lib/menu/favorite_genre.rb"
-require "../lib/menu/genres.rb"
-require "../lib/menu/list.rb"
+require_relative '../lib/menu/add_book.rb'
+require_relative '../lib/menu/favorite_genre.rb'
+require_relative '../lib/menu/genres.rb'
+require_relative '../lib/menu/list.rb'
 
 def menu
   list = <<-LIST
@@ -20,20 +20,14 @@ end
 
 def parse_user_input(input)
   case input
-  when "list"||1
-    list
-  when "add book"||2
-    ask_for_book
-  when "genres" || 3
-    genres
-  when "favorite genre" || 4
-    favorite_genre
-  else puts "Invalid input"
+    when "list"||1
+      list
+    when "add book"||2
+      ask_for_book
+    when "genres" || 3
+      genres
+    when "favorite genre" || 4
+      favorite_genre
+    else puts "Invalid input"
+    end
 end
-
-#enter command to list menus
-
-
-
-
-menu
