@@ -7,9 +7,12 @@ def get_book_data_from_title(title, author)
   response_string = RestClient.get("https://www.googleapis.com/books/v1/volumes?q=intitle:#{title}+inauthor:#{author}")
   response_hash = JSON.parse(response_string)
   data = response_hash["items"][0]["volumeInfo"] # get description
-  title= data["description"]
+  title= data["title"]
   author=data["authors"][0]
-   description=data["description"]
-  data={title: title, author: author, description:description}
-
+  description=data["description"]
+  pages=data["pageCount"]
+  book_info={title: title, author: author, description:description, pages:pages}
+# binding.pry
 end
+
+# get_book_data_from_title("The Namesake", "Jhumpa Lahiri")
