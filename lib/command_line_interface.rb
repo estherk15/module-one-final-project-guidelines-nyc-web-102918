@@ -42,11 +42,18 @@ def add_book(title,author)
   puts "Is this correct? Y/N \n #{data}"
   answer=gets.chomp
   if answer == "Y"
-    savebook(title,author)
+    savebook_from_data(title,author,data)
   else answer =="N"
-    menu
   end
 end
 
 
 menu
+
+
+def savebook
+
+  author1=Author.new(author)
+  genre= Genre.new(genre)
+  book1=Book.new(title:author,genre)
+end

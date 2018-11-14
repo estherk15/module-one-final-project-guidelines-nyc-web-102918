@@ -8,6 +8,10 @@ def get_book_data_from_title(title, author)
   response_string = RestClient.get("https://www.googleapis.com/books/v1/volumes?q=intitle:#{title}+inauthor:#{author}")
   response_hash = JSON.parse(response_string)
 
-  desc = response_hash["items"][0]["volumeInfo"]
+  desc = response_hash["items"][0]["volumeInfo"]["description"] # get description
+  title= response_hash["items"][0]["volumeInfo"]["description"]
+  author=response_hash["items"][0]["volumeInfo"]["description"][authors][0]
+  
+
 
 end
