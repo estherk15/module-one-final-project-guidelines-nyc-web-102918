@@ -3,6 +3,9 @@
 * [ ] Build migration functions
 * [ ] Built out api_communicator
 * [ ] Build out command line interface
+* [ ] Create a ReadMe file with user instructions
+* [ ] Record a video using app
+* [ ] CLI art VERY OPTIONAL!!!
 
 # App flow:
 
@@ -14,8 +17,8 @@ Terminal  Says,
 “Please enter one of the following commands”
 1. List : View all books in my list, with their author and descriptions
 2. Add Book : Add a book to your reading list
-3. Reading : View books i’m currently reading, with their author
-4. Read : View books you’ve read, with their author
+<!-- 3. Reading : View books i’m currently reading, with their author
+4. Read : View books you’ve read, with their author -->
 5. Genres: List genres in your list, with a count indicating the number of books
 6. most_common_genre : tells you the genre you read the most of
 
