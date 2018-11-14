@@ -1,0 +1,10 @@
+class CreateBooks < ActiveRecord::Migration[5.0]
+  def change
+    create_table :books do |t|
+      t.string :name
+      t.integer :author_id
+      t.integer :genre_id
+
+    end
+  end
+end
