@@ -41,6 +41,7 @@ def add_book(title,author) #calls on get_book_data_from_title to see if the Goog
     elsif answer =="N"
       menu
     else puts 'invalid input.'
+      check_add
     end
   end
   checktitle(book_info,title,author)
@@ -51,10 +52,10 @@ end
 def savebook(book_info, genre) #book_info is has retrieved from api_communicator and user input genre
   author1=Author.new(name: book_info[:author])
   genre1= Genre.new(name: genre)
-  book1=Book.new(title: book_info[:title], author: author1, genre: genre1)
-  # book1.save
-  # author1.save
-  # genre1.save
+  book1=Book.new(title: book_info[:title], author: author1, genre: genre1, pagecount: book_info[:pages])
+  book1.save
+  author1.save
+  genre1.save
   puts' your book has been added'
   menu
 end

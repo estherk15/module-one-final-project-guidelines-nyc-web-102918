@@ -23,13 +23,13 @@ end
 def parse_user_input(input)
   case input
   when "list","1"
-      list
+
     when "add book", "2"
       ask_for_book
     when "genres", "3"
       genres
     when "favorite genre", "4"
-      favorite_genre
+    puts Genre.favorite_genre
     else puts "Invalid input"
       menu
     end

@@ -61,3 +61,5 @@ book1.genre=bla
 book1.update
 
 - Prints the menu again.
+
+- We still need to get the most popular genre
