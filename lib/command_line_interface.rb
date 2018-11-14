@@ -51,9 +51,11 @@ end
 menu
 
 
-def savebook
+def savebook_from_data
 
   author1=Author.new(author)
   genre= Genre.new(genre)
-  book1=Book.new(title:author,genre)
+  book1=Book.new(title:title,author,genre)
 end
+
+def savebook_from_user
