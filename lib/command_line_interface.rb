@@ -14,8 +14,33 @@ LIST
   puts list
 end
 
-def method_name
-
+def parse_user_input(input)
+  case input
+  when "list"||1
+    list
+  when "add book"||2
+    ask_for_book
+  when "genres" || 3
+    genres
+  when "favorite genre" || 4
+    favorite_genre
+  else puts "Invalid input"
 end
+
+def list
+end
+def ask_for_book
+  puts "Enter  the title"
+  title=gets.chomp
+  puts "Enter the author"
+  author=gets.chomp
+  add_book(title,author)
+end
+
+def add_book(title,author)
+  data=get_book_data_from_title(title, author)
+  
+end
+
 
 menu
