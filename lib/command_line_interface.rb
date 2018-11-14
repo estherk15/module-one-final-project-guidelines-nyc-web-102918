@@ -16,18 +16,21 @@ def menu
 LIST
 
   puts list
+  user_response = gets.chomp.downcase
+  parse_user_input(user_response)
 end
 
 def parse_user_input(input)
   case input
-    when "list"||1
+  when "list","1"
       list
-    when "add book"||2
+    when "add book", "2"
       ask_for_book
-    when "genres" || 3
+    when "genres", "3"
       genres
-    when "favorite genre" || 4
+    when "favorite genre", "4"
       favorite_genre
     else puts "Invalid input"
+      menu
     end
 end
