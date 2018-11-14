@@ -1,6 +1,10 @@
 require 'rest-client'
 require 'json'
 require 'pry'
+require "../lib/menu/add_book.rb"
+require "../lib/menu/favorite_genre.rb"
+require "../lib/menu/genres.rb"
+require "../lib/menu/list.rb"
 
 def menu
   list = <<-LIST
@@ -27,26 +31,9 @@ def parse_user_input(input)
   else puts "Invalid input"
 end
 
-def list
-end
-def ask_for_book
-  puts "Enter  the title"
-  title=gets.chomp
-  puts "Enter the author"
-  author=gets.chomp
-  add_book(title,author)
-end
+#enter command to list menus
 
-def add_book(title,author)
-  data=get_book_data_from_title(title, author)
-  puts "Is this correct? Y/N \n #{data}"
-  answer=gets.chomp
-  if answer == "Y"
-    savebook(title,author)
-  else answer =="N"
-    menu
-  end
-end
+
 
 
 menu
