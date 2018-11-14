@@ -1,10 +1,10 @@
 require 'rest-client'
 require 'json'
 require 'pry'
-require_relative '../lib/menu/add_book.rb'
-require_relative '../lib/menu/favorite_genre.rb'
-require_relative '../lib/menu/genres.rb'
-require_relative '../lib/menu/list.rb'
+# require_relative '../lib/menu/add_book.rb'
+# require_relative '../lib/menu/favorite_genre.rb'
+# require_relative '../lib/menu/genres.rb'
+# require_relative '../lib/menu/list.rb'
 
 def menu
   list = <<-LIST

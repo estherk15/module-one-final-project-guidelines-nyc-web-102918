@@ -34,7 +34,6 @@ end
 
 
 def savebook(book_info, genre) #book_info is has retrieved from api_communicator and user input genre
-  binding.pry
   author1=Author.new(name: book_info[:author])
   genre1= Genre.new(name: genre)
   book1=Book.new(title: book_info[:title], author: author1, genre: genre1)
