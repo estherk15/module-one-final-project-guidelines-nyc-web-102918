@@ -39,7 +39,13 @@ end
 
 def add_book(title,author)
   data=get_book_data_from_title(title, author)
-  
+  puts "Is this correct? Y/N \n #{data}"
+  answer=gets.chomp
+  if answer == "Y"
+    savebook(title,author)
+  else answer =="N"
+    menu
+  end
 end
 
 
