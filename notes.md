@@ -1,6 +1,6 @@
 ### to do
 * [x] Build out the models
-* [ ] Build migration functions
+* [x] Build migration functions
 * [ ] Built out api_communicator
 * [ ] Build out command line interface
 
