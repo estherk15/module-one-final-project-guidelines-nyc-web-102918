@@ -46,16 +46,3 @@ def add_book(title,author)
   else answer =="N"
   end
 end
-
-
-menu
-
-
-def savebook_from_data
-
-  author1=Author.new(author)
-  genre= Genre.new(genre)
-  book1=Book.new(title:title,author,genre)
-end
-
-def savebook_from_user

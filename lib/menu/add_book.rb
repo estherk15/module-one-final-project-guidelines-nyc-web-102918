@@ -21,3 +21,13 @@ def add_book(title,author) #calls on get_book_data_from_title to see if the Goog
 
 
 end
+
+
+def savebook(data)
+
+  author1=Author.new(author)
+  genre= Genre.new(genre)
+  book1=Book.new(title:title,author,genre)
+end
+
+def savebook_from_user(title,author)
