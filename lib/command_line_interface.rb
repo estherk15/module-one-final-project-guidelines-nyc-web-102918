@@ -15,7 +15,7 @@ def menu
   list = <<-LIST
   Please enter one of the following commands (by name or number): \n
   1. LIST : View all books in my list, with their author and genre \n
-  2. LIST W/DESCRIPTION: View all books, with their author and descriptions
+  2. LIST W/DESCRIPTION: View all books, with their author and descriptions \n
   3. ADD BOOK : Add a book to your reading list \n
   4. GENRES: List genres in your list, with a count indicating the number of books \n
   5. FAVORITE GENRE : tells you the genre you read the most of. \n
