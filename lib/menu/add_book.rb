@@ -60,6 +60,8 @@ end
 def savebook_from_user(title,author,genre)
   author1=Author.find_or_create_by(name: author)
   genre1=Genre.find_or_create_by(name: genre)
-  book1=Author.find_or_create_by(title:title, author1: author, genre: genre1)
+  book1=Book.find_or_create_by(title: title, author: author1, genre: genre1)
+  puts' your book has been added'
+  menu
 
 end

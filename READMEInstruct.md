@@ -52,7 +52,7 @@ Projects need to be approved prior to launching into them, so take some time to 
         -
       - Address, if anything, what you would change or add to what you have today?
         -status features so readers can add books they've read, are reading, want to read.
-        -
+        -multiple genres for each book
       - Present any code you would like to highlight.   
 7. *OPTIONAL, BUT RECOMMENDED*: Write a blog post about the project and process.
 
