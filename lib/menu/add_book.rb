@@ -6,7 +6,6 @@ def ask_for_book #Asking user input of Title and Author
   title=gets.chomp
   puts "Enter the author"
   author=gets.chomp
-
   add_book(title,author) #calls on method add_book
 
 end
@@ -20,7 +19,7 @@ end
 def add_book(title,author) #calls on get_book_data_from_title to see if the Google books API is returning the matching book information.
   book_info=get_book_data_from_title(title, author)
   def checktitle(book_info,title,author)
-    puts "Is this correct? Y/N \n Title:#{book_info[:title]} \n Author: #{book_info[:author]} \n Genre:#{book_info[:genre]} \n Description:#{book_info[:description][0..200]}..."
+    puts "Is this correct? Y/N \n Title:#{book_info[:title]} \n Author: #{book_info[:author]} \n Genre:#{book_info[:genre]} \n Description:#{book_info[:description][0..300]}..."
     answer=gets.chomp.upcase
     if answer == "Y"|| answer == "YES"
       savebook(book_info, ask_for_genre)
