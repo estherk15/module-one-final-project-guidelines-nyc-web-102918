@@ -13,7 +13,7 @@ end
 
 def ask_for_genre
   puts "Enter the genre"
-  genre=gets.chomp
+  genre=gets.chomp.downcase
   genre
 end
 
