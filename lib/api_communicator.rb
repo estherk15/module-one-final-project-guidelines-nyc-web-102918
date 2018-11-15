@@ -6,6 +6,7 @@ def get_book_data_from_title(title, author)
   #make the web request
   if(author)
     response_string = RestClient.get("https://www.googleapis.com/books/v1/volumes?q=intitle:#{title}+inauthor:#{author}")
+
   else
     response_string = RestClient.get("https://www.googleapis.com/books/v1/volumes?q=intitle:#{title}")
   end
@@ -21,7 +22,11 @@ def get_book_data_from_title(title, author)
     author=data["authors"][0]
     description=data["description"]
     pages=data["pageCount"]
-    book_info={title: title, author: author, description:description, pages:pages}
+    if description
+      book_info={title: title, author: author, description:description, pages:pages}
+    else
+      book_info={title: title, author: author, description: "no description for this title", pages:pages}
+    end
   else puts "No results, check your spelling please"
     ask_for_book
   end

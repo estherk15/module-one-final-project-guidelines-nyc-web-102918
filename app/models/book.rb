@@ -18,6 +18,4 @@ class Book < ActiveRecord::Base
     end
   end
 
-
-
-end
+end #class Book
