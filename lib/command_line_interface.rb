@@ -49,5 +49,5 @@ def parse_user_input(input)
   when "exit", "6"
   else puts "Invalid input."
     menu
-    end
+  end
 end
