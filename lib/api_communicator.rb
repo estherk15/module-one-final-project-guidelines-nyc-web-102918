@@ -21,7 +21,7 @@ end
     pages=data["pageCount"]
 
   book_info={title: title, author: author, description:description, pages:pages}
-  else puts "incorrect spelling"
+else puts "No results, check your spelling please"
     ask_for_book
   end
 
