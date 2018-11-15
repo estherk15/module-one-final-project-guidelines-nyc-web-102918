@@ -8,5 +8,10 @@ class Book < ActiveRecord::Base
     Book.all.map{|book|"Title:#{book.title} \n Author: #{book.author.name} \n Genre:#{book.genre.name}"}
   end
 
+  def self.list_everything
+    Book.all.map{|book|"Title:#{book.title} \n Author: #{book.author.name} \n Genre:#{book.genre.name} \n Description: #{book.description[0..250]}..."}
+  end
+
+
 
 end

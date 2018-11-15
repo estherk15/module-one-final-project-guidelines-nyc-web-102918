@@ -8,7 +8,10 @@ class Genre < ActiveRecord::Base
   #Is there a way to sort this so that we can easily pull the highest count
 
   def self.favorite_genre
-    self.group(:book).count.last #returns #<Genre:0x007fb87544bbe8 id: 8, name: "Religion">=>1
+    favorite_genre= self.all.max{|a,b|a.books.length <=> b.books.length}
+    favorite_genre.name
+  end
+
+   #returns #<Genre:0x007fb87544bbe8 id: 8, name: "Religion">=>1
   end
   #We still need to get the most popular genre
-end
