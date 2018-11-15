@@ -50,19 +50,17 @@ end
 
 
 def savebook(book_info, genre) #book_info is has retrieved from api_communicator and user input genre
-  author1=Author.new(name: book_info[:author])
-  genre1= Genre.new(name: genre)
-  book1=Book.new(title: book_info[:title], author: author1, genre: genre1, pagecount: book_info[:pages])
-  book1.save
-  author1.save
-  genre1.save
+  author1=Author.find_or_create_by(name: book_info[:author])
+  genre1= Genre.find_or_create_by(name: genre)
+  book1=Book.find_or_create_by(title: book_info[:title], author: author1, genre: genre1, pagecount: book_info[:pages])
+
   puts' your book has been added'
   menu
 end
 
 def savebook_from_user(title,author,genre)
-  author1=Author.new(name:author)
-  genre1= Genre.new(name: genre)
-  book1=Book.new(title:title, author1: author, genre: genre1)
+  author1=Author.find_or_create_by(name: author)
+  genre1=Genre.find_or_create_by(name: genre)
+  book1=Author.find_or_create_by(title:title, author1: author, genre: genre1)
 
 end
