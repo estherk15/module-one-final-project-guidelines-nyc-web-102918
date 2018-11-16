@@ -2,8 +2,11 @@ require 'rest-client'
 require 'json'
 require 'pry'
 
-def get_book_data_from_title(title, author)
+def get_book_data_from_api(hash)
   #make the web request
+  title=hash[:title]
+  author=hash[:author]
+
   if(author)
     response_string = RestClient.get("https://www.googleapis.com/books/v1/volumes?q=intitle:#{title}+inauthor:#{author}")
 
@@ -28,7 +31,7 @@ def get_book_data_from_title(title, author)
       book_info={title: title, author: author, description: "no description for this title", pages:pages}
     end
   else puts "No results, check your spelling please"
-    ask_for_book
+    add_book
   end
 
 end

@@ -39,7 +39,7 @@ def parse_user_input(input)
     puts list_w_description
     prompt_user
   when "add book", "3"
-    ask_for_book
+    add_book
   when "read book", "4"
     read_book
   when "genres", "5"
