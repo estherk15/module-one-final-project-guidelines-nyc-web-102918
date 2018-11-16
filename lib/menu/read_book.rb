@@ -1,7 +1,7 @@
 
   def select_book
     puts "which book did you read? (enter a number)"
-    puts list_read.map{|book|"\n#{book.id}: #{book.title}"}
+    puts Book.where(read?:nil).map{|book|"\n#{book.id}: #{book.title}"}
     book_id=gets.chomp
     Book.find(book_id)
 
