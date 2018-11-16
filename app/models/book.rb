@@ -9,50 +9,41 @@ class Book < ActiveRecord::Base
   end
 
   def self.list_read
-      Book.where(read?: true).map{|book|"\n Title: #{book.title} \n Author: #{book.author.name} \n Genre: #{book.genre.name}"}
-    end
+    Book.where(read?: true).map{|book|"\n Title: #{book.title} \n Author: #{book.author.name} \n Genre: #{book.genre.name}"}
+  end
 
-    def self.list_not_read
-      Book.where(read?: nil).map{|book|"\n Title: #{book.title} \n Author: #{book.author.name} \n Genre: #{book.genre.name}"}
-    end
+  def self.list_not_read
+    Book.where(read?: nil).map{|book|"\n Title: #{book.title} \n Author: #{book.author.name} \n Genre: #{book.genre.name}"}
+  end
 
   def self.list_everything
-
     Book.all.map do |book|
       if book.description
         "\n Title: #{book.title} \n Author: #{book.author.name} \n Genre: #{book.genre.name} \n Description:  #{book.description[0..500]}..."
       else
         "\n Title: #{book.title} \n Author: #{book.author.name} \n Genre: #{book.genre.name}"
-
       end
     end
   end
 
   def self.list_everything_read
-
     Book.where(read?: true).map do |book|
       if book.description
         "\n Title: #{book.title} \n Author: #{book.author.name} \n Genre: #{book.genre.name} \n Description:  #{book.description[0..500]}..."
       else
         "\n Title: #{book.title} \n Author: #{book.author.name} \n Genre: #{book.genre.name}"
-
       end
     end
   end
 
   def self.list_everything_not_read
-
     Book.where(read?: nil).map do |book|
       if book.description
         "\n Title: #{book.title} \n Author: #{book.author.name} \n Genre: #{book.genre.name} \n Description:  #{book.description[0..500]}..."
       else
         "\n Title: #{book.title} \n Author: #{book.author.name} \n Genre: #{book.genre.name}"
-
       end
     end
   end
-
-
-
 
 end #class Book
