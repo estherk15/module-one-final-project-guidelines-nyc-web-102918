@@ -39,8 +39,8 @@ def add_book(title,author) #calls on get_book_data_from_title to see if the Goog
     else puts 'Invalid input.'
       check_add
     end
-    checktitle(book_info,title,author)
   end
+  checktitle(book_info,title,author)
 end #def add_book
 
 def savebook(book_info, genre) #book_info is has retrieved from api_communicator and user input genre
