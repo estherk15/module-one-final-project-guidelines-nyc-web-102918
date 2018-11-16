@@ -14,6 +14,7 @@ end
 def menu
   list = <<-LIST
   Please enter one of the following commands (by name or number): \n
+
   1. LIST : View all books in my list, with their author and genre
   2. LIST W/DESCRIPTION: View all books, with their author and descriptions
   3. ADD BOOK : Add a book to your reading list
@@ -21,7 +22,6 @@ def menu
   5. GENRES: List genres in your list, with a count indicating the number of books
   6. FAVORITE GENRE : tells you the genre you read the most of.
   7. Exit:  Exit the program
-
 LIST
 
   puts list
@@ -34,7 +34,7 @@ def parse_user_input(input)
   when "menu"
     menu
   when "list","1"
-    puts Book.list
+    puts list
     prompt_user
   when "list w/description", "2"
     puts Book.list_everything

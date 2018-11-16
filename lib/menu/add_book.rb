@@ -12,12 +12,13 @@ end
 
 def ask_for_genre
   puts "Enter the genre"
-  genre=gets.chomp
+  genre=gets.chomp.downcase
   genre
 end
 
 def add_book(title,author) #calls on get_book_data_from_title to see if the Google books API is returning the matching book information.
   book_info=get_book_data_from_title(title, author)
+
   def checktitle(book_info,title,author)
     puts "Is this correct? Y/N \n Title:#{book_info[:title]} \n Author: #{book_info[:author]} \n Genre:#{book_info[:genre]} \n Description:#{book_info[:description][0..300]}..."
     answer=gets.chomp.upcase
@@ -59,6 +60,8 @@ end
 def savebook_from_user(title,author,genre)
   author1=Author.find_or_create_by(name: author)
   genre1=Genre.find_or_create_by(name: genre)
-  book1=Author.find_or_create_by(title:title, author1: author, genre: genre1)
+  book1=Book.find_or_create_by(title: title, author: author1, genre: genre1)
+  puts' your book has been added'
+  menu
 
 end
