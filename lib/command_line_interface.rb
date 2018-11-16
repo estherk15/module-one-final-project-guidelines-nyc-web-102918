@@ -37,7 +37,7 @@ def parse_user_input(input)
     puts list
     prompt_user
   when "list w/description", "2"
-    puts Book.list_everything
+    puts list_w_description
     prompt_user
   when "add book", "3"
     ask_for_book
