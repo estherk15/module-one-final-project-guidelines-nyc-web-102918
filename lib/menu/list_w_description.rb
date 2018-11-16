@@ -1,5 +1,5 @@
 def list_w_description
-  puts " 1.list books i've read \n 2. List books i'm still working on \n 3. list all books"
+  puts " 1. List books I've read \n 2. List books i'm still working on \n 3. List all books"
   input=gets.chomp
   case input
   when "1"

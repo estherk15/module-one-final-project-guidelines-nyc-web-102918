@@ -13,8 +13,7 @@ end
 
 def menu
   list = <<-LIST
-  Please enter one of the following commands (by name or number): \n
-
+  Please enter one of the following commands (by name or number):
   1. LIST : View all books in my list, with their author and genre
   2. LIST W/DESCRIPTION: View all books, with their author and descriptions
   3. ADD BOOK : Add a book to your reading list
