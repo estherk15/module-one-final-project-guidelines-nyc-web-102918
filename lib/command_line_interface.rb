@@ -17,10 +17,11 @@ def menu
   1. LIST : View all books in my list, with their author and genre
   2. LIST W/DESCRIPTION: View all books, with their author and descriptions
   3. ADD BOOK : Add a book to your reading list
-  4  READ BOOK : Mark book as read
-  5. GENRES: List genres in your list, with a count indicating the number of books
-  6. FAVORITE GENRE : tells you the genre you read the most of.
-  7. Exit:  Exit the program
+  4  START BOOK : Mark book as "currently reading"
+  5  COMPLETE BOOK: Mark book as read
+  6. GENRES: List genres in your list, with a count indicating the number of books
+  7. FAVORITE GENRE : tells you the genre you read the most of.
+  8. Exit:  Exit the program
 LIST
 
   puts list
@@ -40,15 +41,16 @@ def parse_user_input(input)
     prompt_user
   when "add book", "3"
     add_book
-  when "read book", "4"
-    read_book
-  when "genres", "5"
+  when "start book", "4"
+    start_reading_book
+  when "complete book", "5"
+  when "genres", "6"
     puts  Genre.genre_count
     prompt_user
-  when "favorite genre", "6"
+  when "favorite genre", "7"
     puts Genre.favorite_genre
     prompt_user
-  when "exit", "7"
+  when "exit", "8"
   else puts "Invalid input."
     menu
   end
