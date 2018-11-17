@@ -5,6 +5,14 @@ The more that you read, the more things you will know. The more that you learn, 
 Have you ever wondered which books you have read in any given year? The Reading Tracker can give you that answer!
 The Reading Tracker is a program to help you, the reader, track all the books you have read!
 
+## Installation
+- clone this repository,or a fork of this repository
+- In your terminal run:
+  - '''bundle install''' (if needed)
+  - rake db:console
+  - rake db:migrate
+  - ruby bin/run.rb
+
 ## Usage example
 
 Socrates believed that the unexamined life was not worth living. While an extreme example, we believe that by knowing what and how you read, you can only make yourself a more mindful reader. So lets get started!
